@@ -1,0 +1,26 @@
+关机命令	
+	立即关机	halt/poweroff/shutdown -h now(root 用户使用）
+	定时关机	shutdown -h 10 10分钟后关机
+重启命令
+	立刻重启	reboot/shutdown -r now立刻重启
+	定时重启	shutdown -r 10 过10分钟后自动重启
+			shutdown -r 20:00 在时间为20：00的的时候重启
+	取消重启	shutdown -c
+	注意：shutdown命令需要获取root权限
+关闭防火墙 systemctl stop firewalld
+获取root权限	sudo su - root
+解压	
+删除目录及其下文件、文件夹rm -rf 文件夹路径
+查看安装哪些服务service --status-all
+给某个文件夹777权限  chmod -R 777 文件夹
+查看某个进程	ps -ef|grep 进程名字
+杀掉某个进程	kill -9 pid
+查看时间	date -R
+设置时区	sudo timedatectl set-timezone **/** 例如Asia/Shanghai
+
+vim 命令 
+	编辑保存 i进入编辑  编辑结束esc 退出insert模式 :wq 保存并退出
+
+redis	查看redis 状态：systemctl status redis-------------ps -ef|grep redis
+	重启redis：systemctl restart redis.service
+	软件仓库安装的Redis可采用init.d脚本关闭： /etc/init.d/redis-server stop
