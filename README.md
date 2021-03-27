@@ -1,2 +1,0 @@
-# buyi
-private space
